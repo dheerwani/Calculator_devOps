@@ -1,5 +1,5 @@
 
-pubic class Mycalc
+public class Mycalc
 {
 	public static void main(String args[])
 	{
