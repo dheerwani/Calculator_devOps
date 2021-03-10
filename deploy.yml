@@ -1,0 +1,10 @@
+---
+- name: Pull and Run docker image of dheerwani/spe_1
+  hosts: all
+  tasks:
+    - name: Pull dheerwani/spe_1
+      docker_image:
+        name: dheerwani/spe_1
+        source: pull
+
+
