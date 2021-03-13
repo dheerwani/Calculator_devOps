@@ -1,4 +1,4 @@
 FROM openjdk:8
-COPY ./target/mini_project-1.0-SNAPSHOT.jar ./
+COPY ./target/calculatorDevOps-1.0-SNAPSHOT-jar-with-dependencies.jargit  ./
 WORKDIR ./
-CMD ["java", "-cp", "mini_project-1.0-SNAPSHOT.jar", "Mycalc"]
+CMD ["java", "-cp", "calculatorDevOps-1.0-SNAPSHOT-jar-with-dependencies.jar", "Calculator"]
