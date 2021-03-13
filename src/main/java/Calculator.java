@@ -16,60 +16,60 @@ public class Calculator {
 		Scanner scanner = new Scanner(System.in);
 		double number1, number2;
 		do {
-			System.out.println("Calculator-DevOps, Choose to perform operation");
-			System.out.print("Press 1 to find factorial\nPress 2 to find Square root\nPress 3 to find power\nPress 4 to find natural logarithm\n" +
-					"Press 5 to exit\nEnter your choice: ");
-			int choice;
+			System.out.println("Welcome to the calculator!");
+			System.out.print("Choose the following operation\n 1) Factorial\n2) Square root\n3)Power of the number \n4)Natural log\n" +
+					"5)Exit\nEnter the option: ");
+			int opt;
 			try {
-				choice = scanner.nextInt();
+				opt = scanner.nextInt();
 			} catch (InputMismatchException error) {
 				return;
 			}
 
-			switch (choice) {
+			switch (opt) {
 				case 1:
 					// do factorial
-					System.out.print("Enter a number : ");
+					System.out.print("Enter a val : ");
 					number1 = scanner.nextDouble();
-					System.out.println("Factorial of "+number1+" is : " + calculator.factoral(number1));
+					System.out.println("Factorial of "+number1+" is : " + calculator.dev_factorial(number1));
 					System.out.println("\n");
 
 					break;
 				case 2:
 					// find square root
-					System.out.print("Enter a number : ");
+					System.out.print("Enter a val : ");
 					number1 = scanner.nextDouble();
-					System.out.println("Square root of "+number1+" is : " + calculator.sqroot(number1));
+					System.out.println("Square root of "+number1+" is : " + calculator.square_root(number1));
 					System.out.println("\n");
 
 
 					break;
 				case 3:
 					// find power
-					System.out.print("Enter the first number : ");
+					System.out.print("Enter the first val : ");
 					number1 = scanner.nextDouble();
-					System.out.print("Enter the second number : ");
+					System.out.print("Enter the second val : ");
 					number2 = scanner.nextDouble();
 					System.out.println(number1+ " raised to power "+number2+" is : " + calculator.power(number1, number2));
 					System.out.println("\n");
 					break;
 				case 4:
 					// find natural log
-					System.out.print("Enter a number : ");
+					System.out.print("Enter a val : ");
 					number1 = scanner.nextDouble();
 					System.out.println("Natural log of "+number1+" is : " + calculator.naturalLog(number1));
 					System.out.println("\n");
 
 					break;
 				default:
-					System.out.println("Exiting....");
+					System.out.println("Okay Bye!!");
 					return;
 			}
 		} while (true);
 	}
 
 
-	public double factoral(double number1) {
+	public double dev_factorial(double number1) {
 		logger.info("[FACTORIAL] - " + number1);
 		double result = fact(number1);
 		logger.info("[RESULT - FACTORIAL] - " + result);
@@ -78,7 +78,7 @@ public class Calculator {
 
 
 
-	public double sqroot(double number1) {
+	public double square_root(double number1) {
 		logger.info("[SQ ROOT] - " + number1);
 		double result = Math.sqrt(number1);
 		logger.info("[RESULT - SQ ROOT] - " + result);
